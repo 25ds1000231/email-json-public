@@ -1,23 +1,6 @@
-mkdir -p .github/workflows
-cat > .github/workflows/verify-email-step.yml <<'YAML'
-name: Verify Email Step
-
-on:
-  workflow_dispatch: {}
-  push:
-    branches: [ main, master ]
-
 jobs:
   test:
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: "25ds1000231@ds.study.iitm.ac.in"
+      - name: 25ds1000231@ds.study.iitm.ac.in
         run: echo "Hello, world!"
-YAML
-
-git add .github/workflows/verify-email-step.yml
-git commit -m "Add workflow with email step"
-git push
+      
